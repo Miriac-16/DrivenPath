@@ -1,0 +1,13 @@
+Confirmation_work1
+
+a. Create Account:
+-AWS - Yes
+-GitHub - Yes (I already had it)
+
+b. Install:
+-Python - Yes (I already had it)
+-VS Code - Yes (I already had it)
+-Docker Desktop - Yes
+-pgAdmin4 - Yes
+-AWS CLI - Yes
+-Terraform - Yes
