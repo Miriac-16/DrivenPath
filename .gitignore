@@ -1,0 +1,15 @@
+venv/
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+*.docx
+__pycache__/
+consumer_package/
+producer_package/
+*.xml
+*.iml
+.idea
+dbt/logs/
+dbt/.user.yml
+dbt/target/
