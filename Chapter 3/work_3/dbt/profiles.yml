@@ -1,0 +1,11 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres # <--- ¡ESTE ES EL CAMBIO CLAVE!
+      user: airflow
+      password: airflow
+      dbname: airflow
+      schema: driven
+      port: 5432
