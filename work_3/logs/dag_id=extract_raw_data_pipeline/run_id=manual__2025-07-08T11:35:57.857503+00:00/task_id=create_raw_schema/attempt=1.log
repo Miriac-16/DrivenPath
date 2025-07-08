@@ -1,0 +1,28 @@
+[2025-07-08T11:36:00.447+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-08T11:36:00.455+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_raw_data_pipeline.create_raw_schema manual__2025-07-08T11:35:57.857503+00:00 [queued]>
+[2025-07-08T11:36:00.458+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_raw_data_pipeline.create_raw_schema manual__2025-07-08T11:35:57.857503+00:00 [queued]>
+[2025-07-08T11:36:00.458+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-07-08T11:36:00.466+0000] {taskinstance.py:2888} INFO - Executing <Task(SQLExecuteQueryOperator): create_raw_schema> on 2025-07-08 11:35:57.857503+00:00
+[2025-07-08T11:36:00.471+0000] {standard_task_runner.py:72} INFO - Started process 76 to run task
+[2025-07-08T11:36:00.474+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'extract_raw_data_pipeline', 'create_raw_schema', 'manual__2025-07-08T11:35:57.857503+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/driven_data_pipeline.py', '--cfg-path', '/tmp/tmpp6aparh_']
+[2025-07-08T11:36:00.476+0000] {standard_task_runner.py:105} INFO - Job 29: Subtask create_raw_schema
+[2025-07-08T11:36:00.505+0000] {task_command.py:467} INFO - Running <TaskInstance: extract_raw_data_pipeline.create_raw_schema manual__2025-07-08T11:35:57.857503+00:00 [running]> on host c95656197d4a
+[2025-07-08T11:36:00.541+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_raw_data_pipeline' AIRFLOW_CTX_TASK_ID='create_raw_schema' AIRFLOW_CTX_EXECUTION_DATE='2025-07-08T11:35:57.857503+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-08T11:35:57.857503+00:00'
+[2025-07-08T11:36:00.542+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-07-08T11:36:00.543+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-07-08T11:36:00.543+0000] {logging_mixin.py:190} INFO - Current task name:create_raw_schema state:running start_date:2025-07-08 11:36:00.455503+00:00
+[2025-07-08T11:36:00.543+0000] {logging_mixin.py:190} INFO - Dag name:extract_raw_data_pipeline and current dag run status:running
+[2025-07-08T11:36:00.543+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-07-08T11:36:00.544+0000] {sql.py:266} INFO - Executing: CREATE SCHEMA IF NOT EXISTS driven_raw;
+[2025-07-08T11:36:00.547+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-07-08T11:36:00.563+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-07-08T11:36:00.565+0000] {sql.py:509} INFO - Running statement: CREATE SCHEMA IF NOT EXISTS driven_raw;, parameters: None
+[2025-07-08T11:36:00.571+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-07-08T11:36:00.571+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=extract_raw_data_pipeline, task_id=create_raw_schema, run_id=manual__2025-07-08T11:35:57.857503+00:00, execution_date=20250708T113557, start_date=20250708T113600, end_date=20250708T113600
+[2025-07-08T11:36:00.575+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-07-08T11:36:00.577+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-07-08T11:36:00.577+0000] {logging_mixin.py:190} INFO - Dag name:extract_raw_data_pipeline queued_at:2025-07-08 11:35:57.893292+00:00
+[2025-07-08T11:36:00.577+0000] {logging_mixin.py:190} INFO - Task hostname:c95656197d4a operator:SQLExecuteQueryOperator
+[2025-07-08T11:36:00.615+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-08T11:36:00.631+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-08T11:36:00.632+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

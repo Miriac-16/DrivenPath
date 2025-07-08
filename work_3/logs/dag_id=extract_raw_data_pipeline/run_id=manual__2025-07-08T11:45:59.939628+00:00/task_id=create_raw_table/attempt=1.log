@@ -1,0 +1,66 @@
+[2025-07-08T11:46:03.486+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-08T11:46:03.493+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_raw_data_pipeline.create_raw_table manual__2025-07-08T11:45:59.939628+00:00 [queued]>
+[2025-07-08T11:46:03.496+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_raw_data_pipeline.create_raw_table manual__2025-07-08T11:45:59.939628+00:00 [queued]>
+[2025-07-08T11:46:03.496+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-07-08T11:46:03.501+0000] {taskinstance.py:2888} INFO - Executing <Task(SQLExecuteQueryOperator): create_raw_table> on 2025-07-08 11:45:59.939628+00:00
+[2025-07-08T11:46:03.506+0000] {standard_task_runner.py:72} INFO - Started process 83 to run task
+[2025-07-08T11:46:03.508+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'extract_raw_data_pipeline', 'create_raw_table', 'manual__2025-07-08T11:45:59.939628+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/driven_data_pipeline.py', '--cfg-path', '/tmp/tmpdgnpng7w']
+[2025-07-08T11:46:03.509+0000] {standard_task_runner.py:105} INFO - Job 47: Subtask create_raw_table
+[2025-07-08T11:46:03.528+0000] {task_command.py:467} INFO - Running <TaskInstance: extract_raw_data_pipeline.create_raw_table manual__2025-07-08T11:45:59.939628+00:00 [running]> on host c5e8f63c4851
+[2025-07-08T11:46:03.556+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_raw_data_pipeline' AIRFLOW_CTX_TASK_ID='create_raw_table' AIRFLOW_CTX_EXECUTION_DATE='2025-07-08T11:45:59.939628+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-08T11:45:59.939628+00:00'
+[2025-07-08T11:46:03.556+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-07-08T11:46:03.556+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-07-08T11:46:03.557+0000] {logging_mixin.py:190} INFO - Current task name:create_raw_table state:running start_date:2025-07-08 11:46:03.493694+00:00
+[2025-07-08T11:46:03.557+0000] {logging_mixin.py:190} INFO - Dag name:extract_raw_data_pipeline and current dag run status:running
+[2025-07-08T11:46:03.557+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-07-08T11:46:03.557+0000] {sql.py:266} INFO - Executing: 
+        CREATE TABLE IF NOT EXISTS driven_raw.raw_batch_data (
+            person_name VARCHAR(100),
+            user_name VARCHAR(100),
+            email VARCHAR(100),
+            personal_number NUMERIC, 
+            birth_date VARCHAR(100), 
+            address VARCHAR(100),
+            phone VARCHAR(100), 
+            mac_address VARCHAR(100),
+            ip_address VARCHAR(100),
+            iban VARCHAR(100),
+            accessed_at TIMESTAMP,
+            session_duration INT,
+            download_speed INT,
+            upload_speed INT,
+            consumed_traffic INT,
+            unique_id VARCHAR(100)
+        );
+    
+[2025-07-08T11:46:03.560+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-07-08T11:46:03.564+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-07-08T11:46:03.565+0000] {sql.py:509} INFO - Running statement: 
+        CREATE TABLE IF NOT EXISTS driven_raw.raw_batch_data (
+            person_name VARCHAR(100),
+            user_name VARCHAR(100),
+            email VARCHAR(100),
+            personal_number NUMERIC, 
+            birth_date VARCHAR(100), 
+            address VARCHAR(100),
+            phone VARCHAR(100), 
+            mac_address VARCHAR(100),
+            ip_address VARCHAR(100),
+            iban VARCHAR(100),
+            accessed_at TIMESTAMP,
+            session_duration INT,
+            download_speed INT,
+            upload_speed INT,
+            consumed_traffic INT,
+            unique_id VARCHAR(100)
+        );
+    , parameters: None
+[2025-07-08T11:46:03.568+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-07-08T11:46:03.568+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=extract_raw_data_pipeline, task_id=create_raw_table, run_id=manual__2025-07-08T11:45:59.939628+00:00, execution_date=20250708T114559, start_date=20250708T114603, end_date=20250708T114603
+[2025-07-08T11:46:03.571+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-07-08T11:46:03.572+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-07-08T11:46:03.572+0000] {logging_mixin.py:190} INFO - Dag name:extract_raw_data_pipeline queued_at:2025-07-08 11:45:59.957145+00:00
+[2025-07-08T11:46:03.572+0000] {logging_mixin.py:190} INFO - Task hostname:c5e8f63c4851 operator:SQLExecuteQueryOperator
+[2025-07-08T11:46:03.607+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-08T11:46:03.619+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-08T11:46:03.619+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

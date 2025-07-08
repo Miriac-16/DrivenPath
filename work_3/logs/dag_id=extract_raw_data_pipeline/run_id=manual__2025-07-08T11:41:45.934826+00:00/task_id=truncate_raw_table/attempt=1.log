@@ -1,0 +1,28 @@
+[2025-07-08T11:41:50.041+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-08T11:41:50.047+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_raw_data_pipeline.truncate_raw_table manual__2025-07-08T11:41:45.934826+00:00 [queued]>
+[2025-07-08T11:41:50.050+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_raw_data_pipeline.truncate_raw_table manual__2025-07-08T11:41:45.934826+00:00 [queued]>
+[2025-07-08T11:41:50.050+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-07-08T11:41:50.055+0000] {taskinstance.py:2888} INFO - Executing <Task(SQLExecuteQueryOperator): truncate_raw_table> on 2025-07-08 11:41:45.934826+00:00
+[2025-07-08T11:41:50.058+0000] {standard_task_runner.py:72} INFO - Started process 229 to run task
+[2025-07-08T11:41:50.061+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'extract_raw_data_pipeline', 'truncate_raw_table', 'manual__2025-07-08T11:41:45.934826+00:00', '--job-id', '40', '--raw', '--subdir', 'DAGS_FOLDER/driven_data_pipeline.py', '--cfg-path', '/tmp/tmppt20yt3j']
+[2025-07-08T11:41:50.061+0000] {standard_task_runner.py:105} INFO - Job 40: Subtask truncate_raw_table
+[2025-07-08T11:41:50.079+0000] {task_command.py:467} INFO - Running <TaskInstance: extract_raw_data_pipeline.truncate_raw_table manual__2025-07-08T11:41:45.934826+00:00 [running]> on host c95656197d4a
+[2025-07-08T11:41:50.107+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_raw_data_pipeline' AIRFLOW_CTX_TASK_ID='truncate_raw_table' AIRFLOW_CTX_EXECUTION_DATE='2025-07-08T11:41:45.934826+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-08T11:41:45.934826+00:00'
+[2025-07-08T11:41:50.108+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-07-08T11:41:50.108+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-07-08T11:41:50.108+0000] {logging_mixin.py:190} INFO - Current task name:truncate_raw_table state:running start_date:2025-07-08 11:41:50.047852+00:00
+[2025-07-08T11:41:50.108+0000] {logging_mixin.py:190} INFO - Dag name:extract_raw_data_pipeline and current dag run status:running
+[2025-07-08T11:41:50.108+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-07-08T11:41:50.108+0000] {sql.py:266} INFO - Executing: TRUNCATE TABLE driven_raw.raw_batch_data;
+[2025-07-08T11:41:50.111+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-07-08T11:41:50.115+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2025-07-08T11:41:50.116+0000] {sql.py:509} INFO - Running statement: TRUNCATE TABLE driven_raw.raw_batch_data;, parameters: None
+[2025-07-08T11:41:50.126+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-07-08T11:41:50.126+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=extract_raw_data_pipeline, task_id=truncate_raw_table, run_id=manual__2025-07-08T11:41:45.934826+00:00, execution_date=20250708T114145, start_date=20250708T114150, end_date=20250708T114150
+[2025-07-08T11:41:50.129+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-07-08T11:41:50.129+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-07-08T11:41:50.129+0000] {logging_mixin.py:190} INFO - Dag name:extract_raw_data_pipeline queued_at:2025-07-08 11:41:45.964631+00:00
+[2025-07-08T11:41:50.129+0000] {logging_mixin.py:190} INFO - Task hostname:c95656197d4a operator:SQLExecuteQueryOperator
+[2025-07-08T11:41:50.161+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-08T11:41:50.173+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-08T11:41:50.173+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
